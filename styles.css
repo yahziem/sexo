@@ -1,0 +1,129 @@
+/* Reinicio de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #000000, #e1f5fe);
+  padding: 20px;
+}
+
+/* Contenedor de tarjetas en fila */
+.profile-container {
+  display: flex;
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Tarjeta de perfil */
+.profile-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  max-width: 90vw; /* Evita que la tarjeta supere el 90% del ancho de la pantalla en dispositivos móviles */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen de perfil */
+.profile-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Nombre del perfil */
+.profile-name {
+  font-size: 22px;
+  color: #333;
+  margin: 15px 0 5px;
+}
+
+/* Descripción del perfil */
+.profile-bio {
+  font-size: 15px;
+  color: #555;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+
+/* Botón de "Like" */
+.like-button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.like-button:hover {
+  background-color: #ff1744;
+}
+
+.like-button:active {
+  transform: scale(0.95);
+}
+
+/* Animación de "Like" */
+@keyframes like {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.liked {
+  animation: like 0.5s ease;
+}
+
+/* Quita el subrayado de los enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Estilos adaptativos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; /* Cambia a columna para dispositivos móviles */
+    align-items: center; /* Centra las tarjetas en pantallas pequeñas */
+  }
+  
+  .profile-card {
+    width: 90%; /* Ajusta el ancho para que ocupe casi toda la pantalla */
+    margin-bottom: 20px; /* Espacio entre tarjetas en modo columna */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 20px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+  }
+
+  .profile-bio {
+    font-size: 14px;
+  }
+
+  .like-button {
+    font-size: 16px; /* Reduce el tamaño del botón en dispositivos más pequeños */
+    padding: 8px 16px;
+  }
+}
