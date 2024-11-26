@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.header {
+    background-color: #002855; /* Azul marino oscuro */
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.alert {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 2px solid #004080; /* Azul oficial */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert-title {
+    color: #002855;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.alert-description {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.suspect-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.suspect-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #002855;
+    object-fit: cover;
+}
+
+.suspect-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.suspect-info li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #002855;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #002855;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
